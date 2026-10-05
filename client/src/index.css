@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0A0C10] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white font-sans;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 45%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.06) 0px, transparent 40%),
+      radial-gradient(at 50% 100%, rgba(244, 63, 94, 0.04) 0px, transparent 50%),
+      linear-gradient(to right, rgba(48, 54, 61, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(48, 54, 61, 0.12) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0C10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #30363D;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #484F58;
+  }
+}
+
+@layer components {
+  /* 2026 Campus Terminal structural cards */
+  .terminal-card {
+    @apply bg-[#161B22] border border-[#30363D] shadow-2xl transition-all duration-200;
+  }
+
+  .terminal-card-hover {
+    @apply bg-[#161B22] border border-[#30363D] shadow-2xl transition-all duration-200 hover:border-slate-500 hover:shadow-indigo-500/10 hover:-translate-y-0.5;
+  }
+
+  .glass-card {
+    @apply bg-[#161B22]/90 backdrop-blur-md border border-[#30363D] shadow-xl;
+  }
+
+  .glass-card-hover {
+    @apply bg-[#161B22]/90 backdrop-blur-md border border-[#30363D] shadow-xl transition-all duration-300 hover:border-indigo-500/50 hover:shadow-indigo-500/10 hover:-translate-y-1;
+  }
+
+  .glass-panel {
+    @apply bg-[#161B22] backdrop-blur-lg border border-[#30363D] shadow-2xl;
+  }
+
+  .glass-input {
+    @apply bg-[#0A0C10] border border-[#30363D] text-slate-100 placeholder-slate-500 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all font-sans;
+  }
+
+  .gradient-heading {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-indigo-300 font-display;
+  }
+
+  .gradient-brand-heading {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-emerald-400 to-cyan-400 font-display;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-medium px-5 py-2.5 rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-500 hover:shadow-indigo-500/40 active:scale-[0.98] transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-medium px-5 py-2.5 rounded-xl bg-[#21262D] text-slate-200 border border-[#30363D] hover:bg-[#30363D] hover:text-white active:scale-[0.98] transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 font-medium px-4 py-2 rounded-xl bg-rose-500/15 text-rose-300 border border-rose-500/30 hover:bg-rose-500/25 hover:text-rose-200 active:scale-[0.98] transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-mint {
+    @apply inline-flex items-center justify-center gap-2 font-medium px-4 py-2 rounded-xl bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25 hover:text-emerald-200 active:scale-[0.98] transition-all;
+  }
+
+  /* Digital Pass Notches & Perforation Aesthetic */
+  .ticket-perforation {
+    border-style: dashed;
+    border-color: #30363D;
+  }
+
+  .ticket-stamp-void {
+    border: 3px solid #F43F5E;
+    color: #F43F5E;
+    transform: rotate(-12deg);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+  }
+}

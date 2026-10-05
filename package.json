@@ -1,0 +1,20 @@
+{
+  "name": "campus-event-management-system",
+  "version": "1.0.0",
+  "description": "Campus Event & Workshop Management System (MERN Stack with Tailwind CSS)",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
+    "seed": "node server/seed.js",
+    "test": "node test_concurrency.js",
+    "test:concurrency": "node test_concurrency.js",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "puppeteer": "^25.8.0"
+  }
+}
