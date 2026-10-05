@@ -6,12 +6,12 @@
     "server": "node server/server.js",
     "client": "npm --prefix client run dev",
     "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
-    "build": "npm --prefix client run build",
+    "build": "node build.js",
     "start": "node server/server.js",
     "seed": "node server/seed.js",
     "test": "node test_concurrency.js",
     "test:concurrency": "node test_concurrency.js",
-    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
