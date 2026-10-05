@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const path = require('path');
+const fs = require('fs');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
@@ -57,9 +58,6 @@ app.use('/api/v1/registrations', registrationRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/registrations', registrationRoutes);
-
-const path = require('path');
-const fs = require('fs');
 
 // Serve client dist in production when available
 const clientDistPath = path.join(__dirname, '../client/dist');
