@@ -1,12 +1,14 @@
 # ⚡ CampusHub — High-Concurrency Event Reservation Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online%20(Render)-10B981?style=for-the-badge&logo=render&logoColor=white)](https://campus-event-management-system-hedl.onrender.com/)
+
 [![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![Express](https://img.shields.io/badge/Express.js-v4.19-000000?logo=express&logoColor=white)](https://expressjs.com)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atomic%20Writes-47A248?logo=mongodb&logoColor=white)](https://mongodb.com)
 [![React](https://img.shields.io/badge/React-Vite%202026-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+> 🌐 **Live Production URL:** [https://campus-event-management-system-hedl.onrender.com/](https://campus-event-management-system-hedl.onrender.com/)  
 > **Portfolio & Resume Project:** Prepared for **Adobe Technical Consultant (Domain 2: Backend & Software Engineering)**.  
 > Demonstrates atomic concurrency control, race condition elimination under high traffic spikes, cryptographic pass generation, transactional seat rollback, and modern 2026 dark terminal aesthetics.
 
